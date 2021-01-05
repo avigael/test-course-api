@@ -1,1 +1,1 @@
-# test-course-api
+# Example Course API
