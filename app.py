@@ -18,12 +18,16 @@ except Exception as e:
     COURSES = {}
     PREV_COURSES = {}
 
+@app.route('/',methods=['GET'])
+def get_main():
+    return jsonify({'github': 'https://github.com/avigael/test-course-api'})
+
 @app.route('/courses/completed/',methods=['GET'])
 def get_completed():
     return PREV_COURSES
 
 @app.route('/courses/',methods=['GET'])
-def get_classes():
+def get_courses():
     return COURSES
 
 if __name__ == '__main__':
