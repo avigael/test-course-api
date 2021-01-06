@@ -28,7 +28,10 @@ def get_completed():
 
 @app.route('/courses/',methods=['GET'])
 def get_courses():
-    return COURSES
+    data = []
+    for key in COURSES:
+        data.append(COURSES[key])
+    return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=False)
